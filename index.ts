@@ -23,21 +23,7 @@ export class MainGame extends CoreGame {
 		);
 	}
 
-	protected create() {
-		Timer.delayedCall(500, () => {
-			Logger.log("chal gya bhai m");
-		});
-		Timer.delayedLoopCall(500, () => {
-			// Timer.killDelayedCall(delayloopcall);
-			Logger.log("chal gya loop bhai m");
-		});
-		Timer.delayedRepeatCall(1000, 5, () => {
-			Logger.log("chal gya repeat bhai m");
-			Timer.killAllDelayedCalls();
-			// Timer.killDelayedCall(repeat);
-		});
-	}
-
+	
 	override setupEnvironment(): void {
 		//
 	}

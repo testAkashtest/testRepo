@@ -8,15 +8,6 @@ sendInitRequest().then(function() {
   // setInterval(sendPlayRequest, 500);
 });
 
-function placeGameRequest() {
-  if(state == 'base') {
-    sendPlayRequest();
-  } else if(state == 'pick'){
-    sendPickRequest();
-  } else if(state == 'freespin'){
-    sendFreespinRequest();
-  }
-}
 
 /**
  * async method : Sends the game initialization requestto the Server and wait for the response.
