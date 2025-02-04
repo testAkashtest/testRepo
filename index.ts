@@ -10,20 +10,7 @@ import {CInitializeLoader, CommandQueueController, CoreGame, Logger, SignalSpher
 import {BaseGameSuperState} from "./BaseGameSuperState";
 import {gameConfig} from "./GameConfig";
 
-export class MainGame extends CoreGame {
-	constructor(config: TCoreGameConfig) {
-		super(config);
-		CommandQueueController.getCommand(CInitializeLoader)?.execute();
-		SignalSphere.addEventListener(
-			"basegame_assets_loaded",
-			() => {
-				this.create();
-			},
-			this,
-		);
-	}
 
-	
 	override setupEnvironment(): void {
 		//
 	}

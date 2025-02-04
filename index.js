@@ -8,28 +8,6 @@ sendInitRequest().then(function() {
   // setInterval(sendPlayRequest, 500);
 });
 
-
-/**
- * async method : Sends the game initialization requestto the Server and wait for the response.
- */
-async function sendInitRequest () {
-  let wager = {
-      state: state
-    };
-    
-    let response = await fetch('http://localhost:3000/init', {
-      method: 'post',
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8'
-      },
-      body: JSON.stringify(wager)
-    });
-    
-    let result = await response.json();
-    console.log("res init ", result);
-}
-
 /**
  * async method : Sends a Request to Server and wait for the response.
  * wager : Object containing data to be sent to the server
