@@ -20,4 +20,6 @@ import {gameConfig} from "./GameConfig";
 	}
 }
 
+
+
 new MainGame(gameConfig);
